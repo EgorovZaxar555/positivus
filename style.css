@@ -253,7 +253,7 @@ a.btn_black {
     background-color: #191A23;
 }
 
-.studies_content .line{
+.studies_content .line {
     width: 1px;
     height: auto;
     background-color: var(--white);
@@ -277,4 +277,88 @@ a.btn_black {
     font-weight: 300;
     margin-right: 15px;
     color: var(--green);
+}
+
+.content_accordions {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 140px;
+}
+
+.accordion {
+    background-color: #F3F3F3;
+    border-radius: 40px;
+    border: 1px solid black;
+    border-bottom: 7px solid black;
+}
+
+.accordion_header {
+    position: relative;
+    cursor: pointer;
+    padding: 40px 60px;
+}
+
+.accord_title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion .accord_title::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 48px;
+    width: 58px;
+    height: 58px;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: #F3F3F3;
+}
+
+.accordion_header h2 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.accordion_header h4 {
+    font-size: 30px;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.accordion_header .block {
+    display: flex;
+    align-items: center;
+}
+
+.accordion_content p {
+    margin-top: 30px;
+}
+
+.accordion_content {
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    max-height: 0;
+}
+
+.accordion.active .accordion_content {
+    border-top: 1px solid black;
+    max-height: 150px;
+    margin-top: 30px;
+}
+
+.accordion.active {
+    background-color: var(--green);
+}
+
+.accordion.active .accord_title::before {
+    content: '-';
 }
